@@ -1,0 +1,19 @@
+Options -Indexes
+<Files "userStorage.json">
+Deny from all
+</Files>
+<Files "errorMessage.php">
+Deny from all
+</Files>
+<Files "CrudStorage.php">
+Deny from all
+</Files>
+<Files "User.php">
+Deny from all
+</Files>
+<Files "UserStorage.php">
+Deny from all
+</Files>
+ <Files "Constant.php">
+ Deny from all
+ </Files>

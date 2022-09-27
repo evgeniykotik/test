@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 5px 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+a {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button, input {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.msg {
+    border: 2px solid red;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.none {
+    display: none;
+}
