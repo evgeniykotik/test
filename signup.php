@@ -18,19 +18,19 @@ if ($_SESSION["user"]) {
 <form>
     <label>Логин</label>
     <input type="text" name="login" placeholder="Введите логин">
-    <p class="msg none" id="1"></p>
+    <p class="msg none" id="errorLogin"></p>
     <label>Пароль</label>
     <input type="password" name="password" placeholder="Введите пароль">
-    <p class="msg none" id="2"></p>
+    <p class="msg none" id="errorPassword"></p>
     <label>Подтвердите пароль</label>
     <input type="password" name="passwordConfirm" placeholder="Введите пароль">
-    <p class="msg none" id="3"></p>
+    <p class="msg none" id="errorPasswordConfirm"></p>
     <label>Email</label>
     <input type="email" name="email" placeholder="Введите адрес почты">
-    <p class="msg none" id="4"></p>
+    <p class="msg none" id="errorEmail"></p>
     <label>Имя пользователя</label>
     <input type="text" name="name" placeholder="Введите имя">
-    <p class="msg none" id="5"></p>
+    <p class="msg none" id="errorName"></p>
     <button type="submit" class="sign-btn">Регистрация</button>
     <p> Есть аккаунт?<a href="login.php"> Пройди авторизацию</a>.</p>
 

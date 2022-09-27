@@ -20,13 +20,13 @@ $response = [];
 $newUser = [];
 
 if (strlen($login) < Constant::MIN_LOGIN_LENGTH) {
-    $response["messageLogin"] = ErrorMessage::$errorMessage["errorLoginLength"];
+    $response["messageLogin"] = sprintf(ErrorMessage::$errorMessage["errorLoginLength"], Constant::MIN_LOGIN_LENGTH);
 }
 if (!$isUnique) {
     $response["messageLogin"] = ErrorMessage::$errorMessage["errorLoginUnique"];
 }
 if (strlen($password) < Constant::MIN_PASSWORD_LENGTH) {
-    $response["messagePassword"] = ErrorMessage::$errorMessage["errorPasswordLength"];
+    $response["messagePassword"] = sprintf(ErrorMessage::$errorMessage["errorPasswordLength"], Constant::MIN_PASSWORD_LENGTH);
 }
 if (!preg_match("/((?<=\d)[a-z])|((?<=[a-z])\d)/i", $password)) {
     $response["messagePassword"] = ErrorMessage::$errorMessage["errorPasswordContent"];
@@ -41,7 +41,7 @@ if (!preg_match("/^[a-z]+$/i", $name)) {
     $response["messageName"] = ErrorMessage::$errorMessage["errorNameContent"];
 }
 if (strlen($name) < Constant::MIN_NAME_LENGTH) {
-    $response["messageName"] = ErrorMessage::$errorMessage["errorNameLength"];
+    $response["messageName"] = sprintf(ErrorMessage::$errorMessage["errorNameLength"], Constant::MIN_NAME_LENGTH);
 }
 if (empty($response)) {
     $response["status"] = true;

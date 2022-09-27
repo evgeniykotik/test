@@ -17,10 +17,10 @@ if ($_SESSION["user"]) {
 <form>
     <label>Логин</label>
     <input type="text" name="login" placeholder="Введите логин">
-    <p class="msg none" id="1"></p>
+    <p class="msg none" id="errorLogin"></p>
     <label>Пароль</label>
     <input type="password" name="password" placeholder="Введите пароль">
-    <p class="msg none" id="2"></p>
+    <p class="msg none" id="errorPassword"></p>
     <button type="submit" class="login-btn">Войти</button>
     <p> У вас нет аккаунта?<a href="signup.php"> Пройди регистрацию</a>.</p>
 </form>

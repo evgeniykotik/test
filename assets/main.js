@@ -25,8 +25,8 @@ $('.login-btn').click(function (e) {
             if (data.status === true) {
                 document.location.href = 'profile.php';
             } else {
-                handleErrorMessage(data["messageLogin"], $('#1'));
-                handleErrorMessage(data["messagePassword"], $('#2'))
+                handleErrorMessage(data["messageLogin"], $('#errorLogin'));
+                handleErrorMessage(data["messagePassword"], $('#errorPassword'))
             }
         }
     });
@@ -56,11 +56,11 @@ $('.sign-btn').click(function (e) {
             if (data.status === true) {
                 document.location.href = 'login.php';
             } else {
-                handleErrorMessage(data["messageLogin"], $('#1'));
-                handleErrorMessage(data["messagePassword"], $('#2'));
-                handleErrorMessage(data["messagePasswordConfirm"], $('#3'));
-                handleErrorMessage(data["messageEmail"], $('#4'));
-                handleErrorMessage(data["messageName"], $('#5'));
+                handleErrorMessage(data["messageLogin"], $('#errorLogin'));
+                handleErrorMessage(data["messagePassword"], $('#errorPassword'));
+                handleErrorMessage(data["messagePasswordConfirm"], $('#errorPasswordConfirm'));
+                handleErrorMessage(data["messageEmail"], $('#errorEmail'));
+                handleErrorMessage(data["messageName"], $('#errorName'));
             }
         }
     });
