@@ -9,7 +9,7 @@ $password = $_POST["password"];
 $response = [];
 
 $storage = CrudStorage::getUsersStorage();
-$user = $storage->read($login);
+$user = $storage->read("login", $login);
 
 if ($user == null) {
     $response = [
@@ -19,8 +19,8 @@ if ($user == null) {
     die();
 } else {
     $md5 = md5($password . $login);
-    if ($md5 == $user->getPassword()) {
-        $_SESSION["user"] = ["name" => $user->getName()];
+    if ($md5 == $user->getFieldValue("password")) {
+        $_SESSION["user"] = ["name" => $user->getFieldValue("name")];
         $response = [
             "status" => true
         ];

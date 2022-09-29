@@ -4,7 +4,7 @@ abstract class CrudStorage
 {
     abstract function create($data);
 
-    abstract function read($uniqueField);
+    abstract function read($field, $uniqueField);
 
     abstract function update($data);
 

@@ -13,16 +13,21 @@ $email = $_POST["email"];
 $name = trim($_POST["name"]);
 
 $storage = CrudStorage::getUsersStorage();
-$user = $storage->read($login);
-$isUnique = $user == null;
+$userLogin = $storage->read("login", $login);
+$isUniqueLogin = $userLogin == null;
+$userEmail = $storage->read("email", $email);
+$isUniqueEmail= $userEmail ==null;
 
 $response = [];
 $newUser = [];
 
+if (str_replace(" ", "", $login) != $login) {
+    $response["messageLogin"] = ErrorMessage::$errorMessage["errorLoginWithoutSpace"];
+}
 if (strlen($login) < Constant::MIN_LOGIN_LENGTH) {
     $response["messageLogin"] = sprintf(ErrorMessage::$errorMessage["errorLoginLength"], Constant::MIN_LOGIN_LENGTH);
 }
-if (!$isUnique) {
+if (!$isUniqueLogin) {
     $response["messageLogin"] = ErrorMessage::$errorMessage["errorLoginUnique"];
 }
 if (strlen($password) < Constant::MIN_PASSWORD_LENGTH) {
@@ -36,6 +41,9 @@ if ($password !== $passwordConfirm) {
 }
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $response["messageEmail"] = ErrorMessage::$errorMessage["errorEmail"];
+}
+if (!$isUniqueEmail) {
+    $response["messageEmail"] = ErrorMessage::$errorMessage["errorEmailUnique"];
 }
 if (!preg_match("/^[a-z]+$/i", $name)) {
     $response["messageName"] = ErrorMessage::$errorMessage["errorNameContent"];

@@ -3,6 +3,7 @@
 class ErrorMessage
 {
     static $errorMessage = array("errorLogin" => "Неверный логин.",
+        "errorLoginWithoutSpace" => "При написании логина не используйте пробелы.",
         "errorLoginLength" => "Логин меньше %d символов.",
         "errorLoginUnique" => "Логин не уникален.",
         "errorPassword" => "Неверный пароль.",

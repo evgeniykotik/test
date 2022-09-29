@@ -16,19 +16,21 @@ class User implements JsonSerializable
         $this->name = $name;
     }
 
-    public function getLogin()
+    public function getFieldValue($field)
     {
-        return $this->login;
-    }
+        if ( $field=="login") {
+            return $this->login;
+        }
+        elseif ($field=="email") {
+            return $this->email;
+        }
+        elseif ($field=="password") {
+            return $this->password;
+        }
+        elseif ($field=="name") {
+            return $this->name;
+        }
 
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    public function getName()
-    {
-        return $this->name;
     }
 
     public function jsonSerialize()

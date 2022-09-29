@@ -34,10 +34,10 @@ class UsersStorage extends CrudStorage
         $this->saveUsersToFile();
     }
 
-    function read($uniqueField)
+    function read($field, $uniqueField)
     {
         foreach ($this->listUsers as $u) {
-            if ($u->getLogin() == $uniqueField) {
+            if ($u->getFieldValue($field) == $uniqueField) {
                 return $u;
             }
         }

@@ -21,7 +21,7 @@ if ($_SESSION["user"]) {
     <label>Пароль</label>
     <input type="password" name="password" placeholder="Введите пароль">
     <p class="msg none" id="errorPassword"></p>
-    <button type="submit" class="login-btn">Войти</button>
+    <input type="button" value="Войти" class="login-btn">
     <p> У вас нет аккаунта?<a href="signup.php"> Пройди регистрацию</a>.</p>
 </form>
 
