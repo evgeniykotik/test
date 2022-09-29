@@ -18,16 +18,13 @@ class User implements JsonSerializable
 
     public function getFieldValue($field)
     {
-        if ( $field=="login") {
+        if ($field == "login") {
             return $this->login;
-        }
-        elseif ($field=="email") {
+        } elseif ($field == "email") {
             return $this->email;
-        }
-        elseif ($field=="password") {
+        } elseif ($field == "password") {
             return $this->password;
-        }
-        elseif ($field=="name") {
+        } elseif ($field == "name") {
             return $this->name;
         }
 

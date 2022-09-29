@@ -16,7 +16,7 @@ $storage = CrudStorage::getUsersStorage();
 $userLogin = $storage->read("login", $login);
 $isUniqueLogin = $userLogin == null;
 $userEmail = $storage->read("email", $email);
-$isUniqueEmail= $userEmail ==null;
+$isUniqueEmail = $userEmail == null;
 
 $response = [];
 $newUser = [];
