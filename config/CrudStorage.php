@@ -10,7 +10,7 @@ abstract class CrudStorage
 
     abstract function delete($data);
 
-    static function getUsersStorage() : CrudStorage
+    static function getUsersStorage(): CrudStorage
     {
         return UsersStorage::getInstance();
     }

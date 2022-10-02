@@ -53,11 +53,11 @@ if (strlen($name) < Constant::MIN_NAME_LENGTH) {
 }
 if (empty($response)) {
     $response["status"] = true;
-    $newUser = ["login" => $login, "password" => md5($password . $login), "email" => $email, "name" => $name];
+    $newUser = new User($login, md5($password . $login), $email, $name);
     $storage->create($newUser);
     echo json_encode($response);
 } else {
     $response["status"] = false;
     echo json_encode($response);
-    die();
+    die;
 }

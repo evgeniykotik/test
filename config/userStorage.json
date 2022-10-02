@@ -1,15 +1,1 @@
-[
-  {
-    "login": "evgeniykotik123",
-    "password": "14f42566b936adf782dbd38636862368",
-    "email": "alex@mad.ru",
-    "name": "qwe"
-  },
-  {
-    "login": "evgeniykotik",
-    "password": "7f732239bc016579d252280956bfdfa0",
-    "email": "evgeniykot@mail.ru",
-    "name": "asdasd"
-  }
-
-]
+[{"login":"evgeniykotik","password":"7f732239bc016579d252280956bfdfa0","email":"email@da.by","name":"qwe"}]
